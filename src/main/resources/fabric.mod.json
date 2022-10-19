@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "lightningoverflow",
+  "version": "${version}",
+  "name": "LightningOverflow",
+  "description": "Sends a bunch of data about lightning strikes to a discord webhook",
+  "authors": [
+    "PyPylia"
+  ],
+  "contributors": [],
+  "contact": {
+    "sources": "https://github.com/PyPylia/LightningOverflow"
+  },
+  "license": "MIT",
+  "icon": "assets/lightningoverflow/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.pypylia.lightningoverflow.LightningOverflowMod"
+    ],
+    "modmenu": [
+      "dev.pypylia.lightningoverflow.ConfigMenu"
+    ]
+  },
+  "mixins": [
+    "lightningoverflow.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*"
+  }
+}

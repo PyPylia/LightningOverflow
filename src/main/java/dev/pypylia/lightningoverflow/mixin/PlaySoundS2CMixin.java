@@ -15,9 +15,9 @@ public class PlaySoundS2CMixin {
     @Inject(method = "apply", at = @At("HEAD"))
     public void apply(ClientPlayPacketListener clientPlayPacketListener, CallbackInfo ci) {
 		PlaySoundS2CPacket packet = (PlaySoundS2CPacket)(Object)this;
-         if (packet.getSound().getId().getPath() == "entity.lightning_bolt.thunder") {
+        if (packet.getSound().getId().getPath() == "entity.lightning_bolt.thunder") {
             MinecraftClient client = MinecraftClient.getInstance();
             WebhookThread.main(client, "Thunder sound", packet.getX(), packet.getY(), packet.getZ());
-         }
+        }
 	}
 }

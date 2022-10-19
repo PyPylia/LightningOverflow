@@ -46,12 +46,12 @@ public class WebhookThread implements Runnable {
         double slope = (Z - client.player.getZ()) / (X - client.player.getX());
 
         WebhookThread runnable = new WebhookThread(String.format(
-            "{\"embeds\":[{\"title\":\"%s\",\"description\":\"```%s   Z-int: %.4f\\n   Slope: %.4f```\",%s\"footer\":{\"text\":\"%s\"}}]}",
+            "{%s\"embeds\":[{\"title\":\"%s\",\"description\":\"```%s   Z-int: %.4f\\n   Slope: %.4f```\",\"footer\":{\"text\":\"%s\"}}]}",
+            author,
             type,
             coords,
             Y - slope * Z,
             slope,
-            author,
             client.getNetworkHandler()
                 .getPlayerList()
                 .stream()

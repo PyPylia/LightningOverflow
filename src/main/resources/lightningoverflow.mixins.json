@@ -3,7 +3,9 @@
   "package": "dev.pypylia.lightningoverflow.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "EntitySpawnS2CMixin"
+    "EntitySpawnS2CMixin",
+    "PlaySoundIdS2CMixin",
+    "PlaySoundS2CMixin"
   ],
   "injectors": {
     "defaultRequire": 1
